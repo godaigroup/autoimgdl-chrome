@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <link href="/libs/bootstrap/bootstrap.min.css" rel="stylesheet" >
+    <link href="style.css" rel="stylesheet" >
+    <link href="/libs/bootstrap/toggle.min.css" rel="stylesheet" >
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:600,300,400' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1><span>Image Auto Download:</span> Options</h1>
+            <div class="rule-form">
+                <div class="name"><input id="rule-name"  name="name" placeholder="Add your rule name here"></div>
+                <div class="pattern"><input id="pattern"  name="pattern" placeholder="Insert your Regex pattern here for img source: e.g images"></div>
+                <div class="size">
+                    <h4>Specify Image Dimensions</h4>
+                    <input id="image-width"  name="width" placeholder="Image Width" maxlength="255">
+                    <input id="image-height"  name="height" placeholder="Image Height" maxlength="255">
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="delete-btn">Delete Rule</div>
+            <div class="add-btn">Add Rule</div>
+        </div>
+    </div>
+</div>
+<div class="container rule-table">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped table-condensed" >
+                <tr class="uneditable">
+                    <th>#</th>
+                    <th>Rule Name</th>
+                    <th>Pattern</th>
+                    <th>Size(W x H)</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="container other-options">
+    <div class="row">
+        <div class="col-md-12">
+            <input id="file-name"  name="name" placeholder="File Name: e.g %rulename%--%sitedomain%--%dimensions%--%imgdomain%" >
+            <h5>Note: You can use site domain (%sitedomain%), image domain(%imgdomain%), rule name (%rulename%), dimensions (%dimensions%), original file name (%original%), or ext(%ext%).</h5>
+            <input id="folder-path"  name="name" placeholder="Folder Path: e.g  c:\%sitedomain%\images\%dimensions%\%imgdomain%" >
+            <div>
+                <h6>Interactive Folder Path to save images.</h6>
+                <div class="saving-options"></div>
+                <div class="app-status" status="true"></div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12"><div class="save-btn">Save</div><div class="power-off">On/Off!</div><div class="clearfix"></div></div>
+    </div>
+</div>
+<script src="/libs/jquery.min.js"></script>
+<script src="/libs/bootstrap/bootstrap.min.js"></script>
+<script src="/libs/bootstrap/toggle.min.js"></script>
+<script src="options.js"></script>
+</body>
+</html>
